@@ -103,25 +103,25 @@ def main():
    </div>
    """
     st.markdown(html_temp,unsafe_allow_html=True)
-    st.header("Item Purchase Prediction")
+    st.header("Heart disease Prediction")
     age = st.number_input('Insert a Age',18,60)
-    cp = st.number_input('Insert a cp',1,5)
+    cp = st.number_input('Insert a bp',1,5)
     trestbps = st.number_input('Insert a trestbps',100,200)
     chol = st.number_input('Insert a chol',100,500)
     fbs = st.number_input('Insert a fbs',0,1)
     Gender = st.number_input('Insert 0 for Male 1 for Female ',0,1)
-    Geography= st.number_input('Insert 0 for France 1 for Spain',0,1)
+    Geography= st.number_input('Insert 0 for Dibetic 1 for non-dibetic',0,1)
     restecg= st.number_input('Insert a restecg',0,250)
     thalach = st.number_input('Insert a thalach',0,200)
     exang = st.number_input('Insert a exang',0,10)
     oldpeak = st.number_input('Insert a oldpeak',0,5)
-    slope = st.number_input('Insert a slope',0,3)
+    slope = st.number_input('Insert a lung-dis',0,3)
     ca= st.number_input('Insert a ca',0,7)
     thal = st.number_input('Insert a thal',0,7)
     
     resul=""
     if st.button("Predict"):
-      result=predict_note_authentication(age,cp,trestbps,chol,fbs,Gender,Geography,restecg,thalach,exang,oldpeak,slope,ca,thal)
+      result=predict_note_authentication(age,cp,trestbps,chol,fbs,Gender,dias,restecg,thalach,exang,oldpeak,lung-dis,ca,thal)
       st.success('Model has predicted {}'.format(result))
     if st.button("About"):
       st.subheader("Developed by Rishav bansal")
